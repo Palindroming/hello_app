@@ -9,9 +9,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <% if Rails.env.production? || Rails.env.staging? %>
-      <%= javascript_importmap_tags %>
-    <% end %>
+    <%= javascript_importmap_tags %>
     
 
    
