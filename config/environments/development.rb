@@ -8,7 +8,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
 
   config.action_mailer.raise_delivery_errors = false
-  host = 'example.com'
+  host = "#{ENV['CODESPACE_NAME']}-3000.app.github.dev"
   config.action_mailer.default_url_options = { host: host, protocol: 'https' }
   config.cache_classes = false
 
