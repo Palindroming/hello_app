@@ -1,4 +1,18 @@
 class SessionsController < ApplicationController
+
+
+
+  def dev_login
+    if Rails.env.development?
+      user = User.find(params[:id])
+      log_in user
+      redirect_to user
+    else
+      redirect_to root_url
+    end
+      
+    
+  end
   def new; end
 
   def create
